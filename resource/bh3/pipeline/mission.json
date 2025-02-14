@@ -1,0 +1,49 @@
+{
+    "进入任务":{
+        "recognition": "FeatureMatch",
+        "template": "bh3/任务.png",
+        "action": "Click",
+        "post_delay": 3000,
+        "next":["作战任务"]
+    },
+    "作战任务":{
+        "recognition": "OCR",
+        "expected": "作战任务",
+        "action": "Click",
+        "post_delay": 3000,
+        "next":["领取任务奖励"]
+    },
+    "领取任务奖励":{
+        "recognition": "OCR",
+        "expected": "键领取",
+        "action": "Click",
+        "post_delay": 3000,
+        "next":["确认_领取任务奖励"]
+    },
+    "确认_领取任务奖励":{
+        "recognition": "FeatureMatch",
+        "template": "bh3/确定.png",
+        "action": "Click",
+        "post_delay": 3000,
+        "next":["领取任务水晶奖励"]
+    },
+    "领取任务水晶奖励":{
+        "recognition": "FeatureMatch",
+        "template": "bh3/领取任务水晶奖励.png",
+        "action": "Click",
+        "post_delay": 3000,
+        "next":["确认_领取任务水晶奖励"]
+    },
+    "确认_领取任务水晶奖励":{
+        "recognition": "FeatureMatch",
+        "template": "bh3/确定.png",
+        "post_delay": 3000,
+        "action": "Click",
+        "next":["关闭崩坏3"]
+    },
+    "关闭崩坏3":{
+        "action": "StopApp",
+        "post_delay": 3000,
+        "package": "com.miHoYo.bh3.huawei"
+    }
+}

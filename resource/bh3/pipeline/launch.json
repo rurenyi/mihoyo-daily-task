@@ -1,0 +1,166 @@
+{
+    "启动崩坏3": {
+        "action": "StartApp",
+        "package": "com.miHoYo.bh3.huawei",
+        "post_delay":60000,
+        "next":["点击进入游戏"],
+        "interrupt":["更新下载","发现新版本"]
+    },
+    
+    "更新下载":{
+        "recognition": "OCR",
+        "expected": "下载资源",
+        "post_delay": 3000,
+        "next":["执行更新下载"]
+    },
+    "执行更新下载":{
+        "recognition": "FeatureMatch",
+        "template": "bh3/确定.png",
+        "action": "Click",
+        "post_delay": 300000,
+        "next":["确定执行更新下载"]
+    },
+    "确定执行更新下载":{
+        "recognition": "FeatureMatch",
+        "template": "bh3/确定.png",
+        "action": "Click",
+        "post_delay": 300000,
+        "next":["下载后登录"]
+    },
+    "下载后登录":{
+        "recognition": "FeatureMatch",
+        "template": "bh3/确定.png",
+        "action": "Click",
+        "post_delay": 300000
+    },
+    "发现新版本":{
+        "recognition": "OCR",
+        "expected": "发现新版本",
+        "post_delay": 3000,
+        "action": "StopTask"
+    },
+
+
+    "点击进入游戏":{
+        "recognition": "OCR",
+        "expected": "点击任意处进入游戏",
+        "action": "Click",
+        "post_delay": 30000,
+        "next":["版本7日登录奖励","领取每日奖励","领取水晶","深渊结算","点击空白区域关闭","打开家园"]
+    },
+
+
+    "版本7日登录奖励":{
+        "recognition": "OCR",
+        "expected": "剩余",
+        "post_delay": 3000,
+        "next":["领取_版本7日登录奖励"]
+    },
+    "领取_版本7日登录奖励":{
+        "recognition": "FeatureMatch",
+        "template": "bh3/领取登陆奖励.png",
+        "action": "Click",
+        "post_delay": 3000,
+        "next":["确定_版本7日登录奖励"]
+    },
+    "确定_版本7日登录奖励":{
+        "recognition": "FeatureMatch",
+        "template": "bh3/确定.png",
+        "action": "Click",
+        "post_delay": 3000,
+        "next":["版本7日登录奖励2","领取每日奖励","领取水晶","深渊结算","点击空白区域关闭","打开家园"]
+    },
+
+
+    "版本7日登录奖励2":{
+        "recognition": "OCR",
+        "expected": "剩余",
+        "post_delay": 3000,
+        "next":["领取_版本7日登录奖励2"]
+    },
+    "领取_版本7日登录奖励2":{
+        "recognition": "FeatureMatch",
+        "template": "bh3/领取登陆奖励.png",
+        "action": "Click",
+        "post_delay": 3000,
+        "next":["确定_版本7日登录奖励2"]
+    },
+    "确定_版本7日登录奖励2":{
+        "recognition": "FeatureMatch",
+        "template": "bh3/确定.png",
+        "action": "Click",
+        "post_delay": 3000,
+        "next":["领取每日奖励","领取水晶","深渊结算","点击空白区域关闭","打开家园"]
+    },
+
+    "领取每日奖励":{
+        "recognition": "FeatureMatch",
+        "template": "bh3/领取登陆奖励.png",
+        "action": "Click",
+        "post_delay": 3000,
+        "next":["确定_领取每日奖励"]
+    },
+    "确定_领取每日奖励":{
+        "recognition": "FeatureMatch",
+        "template": "bh3/确定.png",
+        "action": "Click",
+        "post_delay": 3000,
+        "next":["领取水晶","深渊结算","点击空白区域关闭","打开家园"]
+    },
+
+
+    "领取水晶":{
+        "recognition": "FeatureMatch",
+        "template": "bh3/领取水晶.png",
+        "action": "Click",
+        "post_delay": 3000,
+        "next":["确定_领取水晶"]
+    },
+    "确定_领取水晶":{
+        "recognition": "FeatureMatch",
+        "template": "bh3/确定.png",
+        "action": "Click",
+        "post_delay": 3000,
+        "next":["领取500水晶","深渊结算","点击空白区域关闭","打开家园"]
+    },
+
+    "领取500水晶":{
+        "recognition": "OCR",
+        "expected": "15/15天",
+        "post_delay": 3000,
+        "next":["点击领取500水晶"]
+    },
+    "点击领取500水晶":{
+        "recognition": "FeatureMatch",
+        "template": "bh3/500水晶.png",
+        "action": "Click",
+        "post_delay": 3000,
+        "next":["确定_领取500水晶"]
+    },
+    "确定_领取500水晶":{
+        "recognition": "FeatureMatch",
+        "template": "bh3/确定.png",
+        "action": "Click",
+        "post_delay": 3000,
+        "next":["深渊结算","点击空白区域关闭","打开家园"]
+    },
+
+
+
+    "深渊结算":{
+        "recognition": "OCR",
+        "expected": "结算奖励",
+        "action": "Click",
+        "post_delay": 3000,
+        "next":["点击空白区域关闭"]
+    },
+
+    "点击空白区域关闭":{
+        "recognition": "OCR",
+        "expected": "点击空白区域关闭",
+        "action": "Click",
+        "post_delay": 6000,
+        "target": [1233,23,9,30],
+        "next":["打开家园"]
+    }
+}

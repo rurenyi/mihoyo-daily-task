@@ -1,0 +1,27 @@
+{
+    "启动星铁": {
+        "action": "StartApp",
+        "package": "com.miHoYo.hkrpg",
+        "post_delay":90000,
+        "next":["点击进入"]
+    },
+    "点击进入":{
+        "recognition": "OCR",
+        "expected": "点击进入",
+        "action": "Click",
+        "post_delay": 90000,
+        "next":["领取月卡"]
+    },
+    "领取月卡":{
+        "recognition": "OCR",
+        "expected": "点击领取今日补给",
+        "action": "Click",
+        "post_delay": 10000,
+        "next":["关闭星铁"]
+    },
+    "关闭星铁":{
+        "action": "StopApp",
+        "post_delay": 3000,
+        "package": "com.miHoYo.hkrpg"
+    }
+}

@@ -1,0 +1,51 @@
+{
+    "出击":{
+        "recognition": "OCR",
+        "expected": "出击",
+        "action": "Click",
+        "post_delay": 3000,
+        "next":["点击出击"]
+    },
+    "点击出击":{
+        "recognition": "OCR",
+        "expected": "出击",
+        "action": "Click",
+        "post_delay": 3000,
+        "next":["材料远征"]
+    },
+    "材料远征":{
+        "recognition": "OCR",
+        "expected": "材料远征",
+        "action": "Click",
+        "post_delay": 3000,
+        "next":["一键减负"]
+    },
+    "一键减负":{
+        "recognition": "OCR",
+        "expected": "键减负",
+        "action": "Click",
+        "post_delay": 3000,
+        "next":["材料减负"]
+    },
+    "材料减负":{
+        "recognition": "FeatureMatch",
+        "template": "bh3/材料减负.png",
+        "action": "Click",
+        "post_delay": 3000,
+        "next":["确认材料减负"]
+    },
+    "确认材料减负":{
+        "recognition": "FeatureMatch",
+        "template": "bh3/确定.png",
+        "action": "Click",
+        "post_delay": 3000,
+        "next":["再次返回主菜单"]
+    },
+    "再次返回主菜单":{
+        "recognition": "OCR",
+        "expected": "主菜单",
+        "action": "Click",
+        "post_delay": 3000,
+        "next":["进入任务"]
+    }
+}

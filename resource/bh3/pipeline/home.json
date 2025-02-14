@@ -1,0 +1,109 @@
+{
+    "打开家园":{
+        "recognition": "OCR",
+        "expected": "家园",
+        "action": "Click",
+        "post_delay": 3000,
+        "next":["进入打工"]
+    },
+
+    "进入打工":{
+        "recognition": "OCR",
+        "expected": "打工",
+        "action": "Click",
+        "post_delay": 3000,
+        "next":["领取打工奖励","一键打工","返回家园"]
+    },
+    "领取打工奖励":{
+        "recognition": "OCR",
+        "expected": "领取奖励",
+        "action": "Click",
+        "post_delay": 3000,
+        "next":["确认_领取打工奖励"]
+    },
+    "确认_领取打工奖励":{
+        "recognition": "FeatureMatch",
+        "template": "bh3/确定.png",
+        "action": "Click",
+        "post_delay": 3000,
+        "next":["一键打工","返回家园"]
+    },
+
+    "一键打工":{
+        "recognition": "OCR",
+        "expected": "键打工",
+        "action": "Click",
+        "post_delay": 3000,
+        "next":["点击_一键打工"]
+    },
+    "点击_一键打工":{
+        "recognition": "OCR",
+        "expected": "键打工",
+        "action": "Click",
+        "post_delay":3000,
+        "next":["返回家园"]
+    },
+    "返回家园":{
+        "recognition": "OCR",
+        "expected": "返回",
+        "action": "Click",
+        "post_delay": 3000,
+        "next":["领取金币满","领取金币"]
+    },
+    "领取金币满":{
+        "recognition": "FeatureMatch",
+        "template": "bh3/收集金币满.png",
+        "action": "Click",
+        "post_delay": 3000,
+        "next":["进入远征"]
+    },
+    "领取金币":{
+        "recognition": "FeatureMatch",
+        "template": "bh3/收集金币.png",
+        "action": "Click",
+        "post_delay": 3000,
+        "next":["进入远征"]
+    },
+    "进入远征":{
+        "recognition": "OCR",
+        "expected": "远征",
+        "action": "Click",
+        "post_delay": 3000,
+        "next":["完成远征","一键远征","返回主菜单"]
+    },
+    "完成远征":{
+        "recognition": "OCR",
+        "expected": "完成远征",
+        "action": "Click",
+        "post_delay": 3000,
+        "next":["确定_完成远征"]
+    },
+    "确定_完成远征":{
+        "recognition": "FeatureMatch",
+        "template": "bh3/确定.png",
+        "action": "Click",
+        "post_delay": 3000,
+        "next":["一键远征"]
+    },
+    "一键远征":{
+        "recognition": "OCR",
+        "expected": "键远征",
+        "action": "Click",
+        "post_delay": 3000,
+        "next":["远征派遣"]
+    },
+    "远征派遣":{
+        "recognition": "OCR",
+        "expected": "远征派遣",
+        "action": "Click",
+        "post_delay": 3000,
+        "next":["返回主菜单"]
+    },
+    "返回主菜单":{
+        "recognition": "OCR",
+        "expected": "主菜单",
+        "action": "Click",
+        "post_delay": 3000,
+        "next":["出击"]
+    }
+}
