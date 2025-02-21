@@ -28,9 +28,8 @@
         "next":["领取任务水晶奖励"]
     },
     "领取任务水晶奖励":{
-        "recognition": "FeatureMatch",
-        "template": "bh3/领取任务水晶奖励.png",
         "action": "Click",
+        "target": [1233,667,9,30],
         "post_delay": 3000,
         "next":["确认_领取任务水晶奖励"]
     },
