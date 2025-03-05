@@ -71,7 +71,7 @@ def main():
     logging.info("#####################################")
     if os.path.exists("./debug/vision"):
         os.rename("./debug/vision","./debug/bh3_"+str(datetime.date.today()))
-    os.kill(process.pid, signal.SIGTERM)  
+    os.kill(process.pid, signal.SIGTERM)
     process.wait()
 
 if __name__ == "__main__":

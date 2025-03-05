@@ -1,5 +1,6 @@
 # python -m pip install maafw
 import subprocess
+import datetime
 import signal
 import time
 import os
@@ -67,7 +68,9 @@ def main():
     else:
         logging.error("执行任务失败")
 
-    os.kill(process.pid, signal.SIGTERM)  
+    if os.path.exists("./debug/vision"):
+        os.rename("./debug/vision","./debug/starrail_"+str(datetime.date.today()))
+    os.kill(process.pid, signal.SIGTERM)
     process.wait()
 
 if __name__ == "__main__":

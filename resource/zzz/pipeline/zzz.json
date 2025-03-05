@@ -2,7 +2,7 @@
     "启动绝区零": {
         "action": "StartApp",
         "package": "com.miHoYo.Nap",
-        "post_delay":90000,
+        "post_delay":120000,
         "next":["点击进入"]
     },
     "点击进入":{
@@ -10,12 +10,12 @@
         "expected": "点击进入游戏",
         "action": "Click",
         "post_delay": 60000,
-        "next":["版本奖励","领取月卡"]
+        "next":["版本奖励","领取月卡","关闭zzz"]
     },
     "版本奖励":{
         "recognition": "OCR",
         "expected": "活动期间",
-        "post_delay": 3000,
+        "post_delay": 5000,
         "next":["领取版本奖励"]
     },
     "领取版本奖励":{
@@ -37,7 +37,7 @@
         "template": "zzz/返回.png",
         "action": "Click",
         "post_delay": 3000,
-        "next":["领取月卡"]
+        "next":["领取月卡","关闭zzz"]
     },
     "领取月卡":{
         "recognition": "OCR",
@@ -48,7 +48,7 @@
     },
     "关闭zzz":{
         "action": "StopApp",
-        "post_delay": 3000,
+        "post_delay": 10000,
         "package": "com.miHoYo.Nap"
     }
 }
