@@ -2,44 +2,10 @@
     "启动崩坏3": {
         "action": "StartApp",
         "package": "com.miHoYo.bh3.huawei",
-        "post_delay":60000,
+        "post_delay":90000,
         "next":["点击进入游戏"],
-        "interrupt":["更新下载","发现新版本"]
+        "interrupt":["再次启动崩坏3","网络连接失败"]
     },
-    
-    "更新下载":{
-        "recognition": "OCR",
-        "expected": "下载资源",
-        "post_delay": 3000,
-        "next":["执行更新下载"]
-    },
-    "执行更新下载":{
-        "recognition": "FeatureMatch",
-        "template": "bh3/确定.png",
-        "action": "Click",
-        "post_delay": 300000,
-        "next":["确定执行更新下载"]
-    },
-    "确定执行更新下载":{
-        "recognition": "FeatureMatch",
-        "template": "bh3/确定.png",
-        "action": "Click",
-        "post_delay": 300000,
-        "next":["下载后登录"]
-    },
-    "下载后登录":{
-        "recognition": "FeatureMatch",
-        "template": "bh3/确定.png",
-        "action": "Click",
-        "post_delay": 300000
-    },
-    "发现新版本":{
-        "recognition": "OCR",
-        "expected": "发现新版本",
-        "post_delay": 3000,
-        "action": "StopTask"
-    },
-
 
     "点击进入游戏":{
         "recognition": "OCR",
@@ -47,6 +13,17 @@
         "action": "Click",
         "post_delay": 30000,
         "next":["版本7日登录奖励","领取每日奖励","领取水晶","深渊结算","点击空白区域关闭","打开家园"]
+    },
+    "再次启动崩坏3": {
+        "recognition": "FeatureMatch",
+        "template": "bh3/图标.png",
+        "post_delay":90000,
+        "action": "Click"
+    },
+    "网络连接失败":{
+        "recognition": "OCR",
+        "expected": "重试",
+        "post_delay": 3000
     },
 
 
