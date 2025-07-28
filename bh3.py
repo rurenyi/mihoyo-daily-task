@@ -9,12 +9,12 @@ from maa.resource import Resource
 from maa.controller import AdbController
 from maa.tasker import Tasker
 from maa.toolkit import Toolkit
-
+ 
 import logging
 logging.basicConfig(level=logging.INFO,filename='log',filemode='a',format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',encoding='utf-8')
 
-mu_mu_player_path = r"D:\\mumu\\MuMu Player 12\\shell\\MuMuPlayer.exe"
-launch_waiting_time = 30
+mu_mu_player_path = r"D:\\Program Files\\Netease\\MuMu Player 12\\shell\\MuMuPlayer.exe"
+launch_waiting_time = 5
 
 def launch_task():
     user_path = "./"

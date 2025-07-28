@@ -3,8 +3,16 @@
         "action": "StartApp",
         "package": "com.miHoYo.bh3.huawei",
         "post_delay":90000,
-        "next":["点击进入游戏"],
+        "next":["下载完毕","点击进入游戏"],
         "interrupt":["再次启动崩坏3","网络连接失败"]
+    },
+
+        "下载完毕":{
+        "recognition": "OCR",
+        "expected": "确定",
+        "post_delay": 30000,
+        "action": "Click",
+        "next":["点击进入游戏"]
     },
 
     "点击进入游戏":{
@@ -25,7 +33,6 @@
         "expected": "重试",
         "post_delay": 3000
     },
-
 
     "版本7日登录奖励":{
         "recognition": "OCR",
