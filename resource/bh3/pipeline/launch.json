@@ -95,7 +95,7 @@
 
     "领取水晶":{
         "recognition": "FeatureMatch",
-        "template": "bh3/领取水晶.png",
+        "template": "bh3/领取月卡水晶.png",
         "action": "Click",
         "post_delay": 3000,
         "next":["确定_领取水晶"]
